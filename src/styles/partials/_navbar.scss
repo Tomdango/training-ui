@@ -1,0 +1,23 @@
+.tu-navbar {
+  background-color: $blue;
+  padding: 15px 25px;
+  box-shadow: $default-box-shadow;
+  display: flex;
+}
+
+.tu-navbar__brand {
+  color: $light;
+  text-shadow: 1px 1px 2px darken($blue, 15);
+  font-weight: 400;
+  padding-right: 20px;
+
+  width: fit-content;
+  border-right: 1px solid $light;
+}
+
+.tu-navbar__course {
+  font-weight: 300;
+  color: $light;
+  text-shadow: 0px 1px 2px darken($blue, 10);
+  padding-left: 20px;
+}

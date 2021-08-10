@@ -1,0 +1,26 @@
+/*************************************
+ * Colours
+ *************************************/
+
+$light: #f9f9f9;
+$red: #ff4b3e;
+$pink: #ff6392;
+$yellow: #ffb20f;
+$blue: #36558f;
+$lightblue: #3abeff;
+$green: #4aad52;
+$turquoise: #64b6ac;
+$grey: #494947;
+$dark: #454955;
+$black: #0d0a0b;
+
+/*************************************
+ * Fonts
+ *************************************/
+$font-family: "Nunito", sans-serif;
+
+/*************************************
+ * Shadows
+ *************************************/
+$default-box-shadow: 0px 3px 10px lighten($grey, 30);
+$light-box-shadow: 0px 3px 5px darken($light, 30);

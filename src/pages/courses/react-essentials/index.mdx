@@ -1,0 +1,33 @@
+---
+course: React Essentials
+slug: react-essentials-index
+---
+
+import TemplatePage from "@/components/TemplatePage"
+import Card from "@/components/Card"
+import Sidebar from "./sidebar.mdx"
+import {graphql} from "gatsby"
+
+# Course Overview
+
+export const pageQuery = graphql`
+  query {
+    allMdx(filter: { frontmatter: { slug: { eq: "react-essentials-index" } } }) {
+      edges { node { tableOfContents } }
+    }
+  }
+`
+
+<!-- End of GraphQL Query -->
+
+export default ({ children, data, ...rest }) => (
+  <TemplatePage {...rest}>
+    <Sidebar
+      subSections={data.allMdx.edges[0].node.tableOfContents.items[0].items}
+      section="react-essentials-index"
+    />
+    <Card className="tu-ml-2" id="main-content">
+      {children}
+    </Card>
+  </TemplatePage>
+)

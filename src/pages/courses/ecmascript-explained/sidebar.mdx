@@ -1,0 +1,18 @@
+import Sidebar from "@/components/Sidebar";
+
+<Sidebar>
+  <Sidebar.ListItem
+    to="/ecmascript-explained/content/1-the-basics"
+    active={props.section == "the-basics"}
+    subSections={props.subSections}
+  >
+    1. The Basics
+  </Sidebar.ListItem>
+  <Sidebar.ListItem
+    to="/ecmascript-explained/content/2-introducing-es2015"
+    active={props.section == "introducing-es2015"}
+    subSections={props.subSections}
+  >
+    2. Introducing ES2015
+  </Sidebar.ListItem>
+</Sidebar>

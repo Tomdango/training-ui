@@ -1,0 +1,21 @@
+---
+course: ECMAScript Explained
+section: Overview
+---
+
+import TemplatePage from "@/components/TemplatePage"
+import Card from "@/components/Card"
+import Sidebar from "./sidebar.mdx"
+
+# Overview
+
+This course will focus on ECMAScript 2015 (ES2015).
+
+export default ({ children, ...rest }) => (
+  <TemplatePage {...rest}>
+    <Sidebar section="overview" />
+    <Card className="tu-ml-2" id="main-content">
+      {children}
+    </Card>
+  </TemplatePage>
+)

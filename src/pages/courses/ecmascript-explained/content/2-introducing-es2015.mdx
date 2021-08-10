@@ -1,0 +1,38 @@
+---
+course: ECMAScript Explained
+section: Introducing ES2015
+slug: ecmascript-introducing-es2015
+---
+
+import TemplatePage from "@/components/TemplatePage"
+import Card from "@/components/Card"
+import Sidebar from "../sidebar.mdx"
+import { graphql } from "gatsby"
+
+# Introducing ES2015
+
+## Promises
+
+## Classes
+
+<!-- End of Content -->
+export default ({ children, data, ...rest }) => {
+  const subSections = data.allMdx.edges[0].node.tableOfContents.items[0].items;
+  return (
+    <TemplatePage {...rest}>
+      <Sidebar subSections={subSections} section="introducing-es2015" />
+      <Card className="tu-ml-2" id="main-content">
+        {children}
+      </Card>
+    </TemplatePage>
+  );
+}
+
+<!-- Page Query to retrieve Table of Contents -->
+export const pageQuery = graphql`
+  query {
+    allMdx(filter: { frontmatter: { slug: { eq: "ecmascript-introducing-es2015" } } }) {
+      edges { node { tableOfContents } }
+    }
+  }
+`;

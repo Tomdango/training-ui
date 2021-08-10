@@ -1,0 +1,38 @@
+@import "~modern-css-reset/dist/reset.min.css";
+@import "../../node_modules/prismjs/themes/prism.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap");
+
+@import "./variables";
+
+/*****************
+ * Partials
+ *****************/
+@import "./partials/card";
+@import "./partials/layout";
+@import "./partials/navbar";
+@import "./partials/sidebar";
+@import "./partials/utils";
+
+html,
+body {
+  font-family: $font-family;
+  background-color: $light;
+  color: $black;
+  font-weight: 400;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+#main-content {
+  & > h2 {
+    margin-top: 20px;
+  }
+}
+
+p {
+  font-size: 16px;
+}

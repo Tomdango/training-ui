@@ -1,0 +1,50 @@
+---
+course: ECMAScript Explained
+section: The Basics
+slug: ecmascript-the-basics
+---
+
+import TemplatePage from "@/components/TemplatePage"
+import Card from "@/components/Card"
+import Sidebar from "../sidebar.mdx"
+import { graphql } from "gatsby"
+
+<!-- Start of Content -->
+
+# The Basics
+
+## Variables
+
+## Data Types
+
+## Comments
+
+## Operators
+
+## Conditionals
+
+## Functions
+
+## Events
+
+<!-- End of Content -->
+export default ({ children, data, ...rest }) => {
+  const subSections = data.allMdx.edges[0].node.tableOfContents.items[0].items;
+  return (
+    <TemplatePage {...rest}>
+      <Sidebar subSections={subSections} section="the-basics" />
+      <Card className="tu-ml-2" id="main-content">
+        {children}
+      </Card>
+    </TemplatePage>
+  );
+}
+
+
+export const pageQuery = graphql`
+  query {
+    allMdx(filter: { frontmatter: { slug: { eq: "ecmascript-the-basics" } } }) {
+      edges { node { tableOfContents } }
+    }
+  }
+`;
