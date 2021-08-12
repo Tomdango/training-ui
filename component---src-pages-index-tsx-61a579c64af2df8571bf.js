@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktraining_ui=self.webpackChunktraining_ui||[]).push([[691],{50231:function(e,n,t){t.r(n);var l=t(67294),u=t(598),r=t(23569),a=t(45154);n.default=function(){return l.createElement("main",null,l.createElement(u.Z,{course:"Introduction to React"}),l.createElement(a.o,null,l.createElement(a.W,null,l.createElement(r.Z,null))))}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-61a579c64af2df8571bf.js.map
